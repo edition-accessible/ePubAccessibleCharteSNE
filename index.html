@@ -1,107 +1,190 @@
 <!DOCTYPE html>
 <html lang="fr"> 
 <head>
-    <title>Charte EPUB Accessible SNE</title>
-    
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Charte technique pour la production de fichiers EPUB nativement accessibles.">
-    <meta name="author" content="SNE">    
-    <link rel="shortcut icon" href="favicon.ico"> 
-    
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
-    
+  <meta charset="utf-8">
+  <title>Charte EPUB accessible — SNE</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Charte technique pour la production de fichiers EPUB nativement accessibles.">
+  <meta name="author" content="SNE">    
+  <link rel="shortcut icon" href="favicon.ico"> 
 
-    <!-- Theme CSS -->  
-    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
 
+  <!-- Icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Theme CSS -->  
+  <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+
+  <style>
+    /* --- STYLE DES CARTES --- */
+    .home-card {
+      transition: transform .15s ease, box-shadow .15s ease;
+      border-radius: 1rem;
+      height: 100%;
+    }
+    .home-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 .75rem 1.5rem rgba(0,0,0,.12);
+    }
+    .home-card .card-body {
+      display: flex; flex-direction: column; align-items: flex-start;
+    }
+
+    /* Icônes sans bordure */
+    .home-icon {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 56px; height: 56px; border-radius: .75rem; margin-right: .75rem;
+      color: inherit;
+    }
+    .home-icon i { font-size: 1.5rem; }
+
+    /* HERO - centré verticalement, titre blanc */
+    .page-header {
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: #fff;
+      text-align: center;
+      min-height: 180px;
+    }
+    .page-header h1,
+    .page-header .page-intro { color: #fff; }
+
+    /* Liste auteurs "à plat" */
+    .authors-section {
+      text-align: center;
+      padding: 1rem 1rem;
+    }
+    .authors-section h2 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    .authors-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem 2rem;
+      padding-left: 0;
+      list-style: none;
+      margin: 0;
+    }
+    .authors-list li {
+      font-weight: 400;
+    }
+    .authors-list strong {
+      font-weight: 600;
+    }
+  </style>
 </head> 
 
 <body>    
-    <header class="header fixed-top">	 
-	       
-        <div class="branding docs-branding">
-            <div class="container-fluid position-relative py-2">
-                <div class="docs-logo-wrapper">
-	                <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon me-2" src="assets/images/accessibility.svg" alt="logo" style="width:20px;"><span class="logo-text">Charte Epub Accessible  <span class="text-alt">SNE</span></span></a></div>    
-                </div><!--//docs-logo-wrapper-->
-	            <div class="docs-top-utilities d-flex justify-content-end align-items-center">
-	
-					<!--<ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
-						<li class="list-inline-item"><a href="#"><i class="fa-brands fa-github fa-fw"></i></a></li>
-			            <li class="list-inline-item"><a href="#"><i class="fa-brands fa-x-twitter fa-fw"></i></a></li>
-		                <li class="list-inline-item"><a href="#"><i class="fa-brands fa-slack fa-fw"></i></a></li>
-		                <li class="list-inline-item"><a href="#"><i class="fa-brands fa-product-hunt fa-fw"></i></a></li>
-		            </ul>//social-list-->
-		          
-	            </div><!--//docs-top-utilities-->
-            </div><!--//container-->
-        </div><!--//branding-->
-    </header><!--//header-->
-    
-    
-    <div class="page-header theme-bg-dark py-5 text-center position-relative">
-	    <div class="theme-bg-shapes-right"></div>
-	    <div class="theme-bg-shapes-left"></div>
-	    <div class="container">
-		    <h1 class="page-heading single-col-max mx-auto">Charte EPUB Accessible</h1>
-		    <div class="page-intro single-col-max mx-auto">Tout savoir sur l'EPUB accessible</div>
-		    <div class="main-search-box pt-3 d-block mx-auto">
-                 <!--<form class="search-form w-100">
-		            <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
-		            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
-		        </form>//recherche-->
-             </div>
-	    </div>
-    </div><!--//page-header-->
-   <div class="page-content">
-	    <div class="container">
-		    <div class="docs-overview py-5">
-			    <div class="row justify-content-center">
-				    <div class="col-12 col-lg-4 py-3">
-					    <div class="card shadow-sm">
-						    <div class="card-body">
-							    <h5 class="card-title mb-3">
-								    <span class="theme-icon-holder card-icon-holder me-2">
-								        <i class="fas fa-map-signs"></i>
-							        </span><!--//card-icon-holder-->
-							        <span class="card-title-text">Accéder à la charte</span>
-							    </h5>
-							    <div class="card-text">
-							 	</div>
-							    <a class="card-link-mask" href="charte.html"></a>
-						    </div><!--//card-body-->
-					    </div><!--//card-->
-				    </div><!--//col-->
-			    </div><!--//row-->
-		    </div><!--//container-->
-		</div><!--//container-->
-    </div><!--//page-content-->
+<header class="header fixed-top">	 
+  <div class="branding docs-branding">
+    <div class="container-fluid position-relative py-2">
+      <div class="docs-logo-wrapper">
+        <div class="site-logo">
+          <a class="navbar-brand" href="index.html">
+            <img class="logo-icon me-2" src="assets/images/accessibility.svg" alt="" style="width:40px;">
+            <span class="logo-text">Charte EPUB accessible <span class="text-alt">SNE</span></span>
+          </a>
+        </div>    
+      </div>
+      <div class="docs-top-utilities d-flex justify-content-end align-items-center"></div>
+    </div>
+  </div>
+</header>
 
-  
-	
+<!-- Bandeau vert avec titre centré -->
+<div class="page-header theme-bg-dark position-relative">
+  <div class="theme-bg-shapes-right"></div>
+  <div class="theme-bg-shapes-left"></div>
+  <div class="container">
+    <h1 class="page-heading single-col-max mx-auto">Charte EPUB accessible</h1>
+    <div class="page-intro single-col-max mx-auto">Tout savoir pour produire des EPUB nativement accessibles.</div>
+  </div>
+</div>
 
-    <footer class="footer">
+<!-- Contenu principal -->
+<div class="page-content">
+  <div class="container">
+    <!-- Deux cartes -->
+    <div class="docs-overview py-5">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-6 col-lg-4 py-3">
+          <div class="card shadow-sm home-card">
+            <div class="card-body">
+              <h5 class="card-title mb-3 d-flex align-items-center">
+                <span class="home-icon"><i class="fa-solid fa-book-open"></i></span>
+                <span class="card-title-text">Charte technique </span>
+              </h5>
+              <p class="card-text mb-3">Les bonnes pratiques, conformes aux standards d’accessibilité.</p>
+              <a class="stretched-link" href="charte.html"></a>
+            </div>
+          </div>
+        </div>
 
-	   
-	    
-    </footer>
-       
-    <!-- Javascript -->          
-    <script src="assets/plugins/popper.min.js"></script>
-    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
-    
-    <!-- Page Specific JS -->
-    <script src="assets/plugins/smoothscroll.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
-    <script src="assets/js/highlight-custom.js"></script> 
-    <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
-    <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
-    <script src="assets/js/docs.js"></script> 
+        <div class="col-12 col-md-6 col-lg-4 py-3">
+          <div class="card shadow-sm home-card">
+            <div class="card-body">
+              <h5 class="card-title mb-3 d-flex align-items-center">
+                <span class="home-icon"><i class="fa-solid fa-image"></i></span>
+                <span class="card-title-text">Les images</span>
+              </h5>
+              <p class="card-text mb-3">Recommandations pour décrire les textes alternatifs des images</p>
+              <a class="stretched-link" href="charte-image.html"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <!-- Auteurs à plat -->
+    <section class="authors-section">
+      <h2> Participants à la rédaction des chartes</h2><small>Membres de la commission Normes & Standards du SNE</small><hr />
+      <ul class="authors-list">
+        
+        <li style="opacity:0.7"><strong>Luc Audrain</strong> — Hachette</li>
+        <li><strong>Christophe Beaumard</strong> — Interforum</li>
+        <li><strong>Gautier Chomel</strong> — EDRLab</li>
+        <li><strong>Dominique Colin</strong> — Eyrolles</li>
+        <li><strong>Dienaba Dia</strong> — Eyrolles</li>
+        <li><strong>Marie de Firmas</strong> — Gallimard</li>
+        <li><strong>Vincent Gros</strong> — Hachette</li>
+        <li><strong>Sébastien Guay</strong> — Hatier</li>
+        <li><strong>Catherine Kempeneers</strong> — Foucher</li>
+        <li><strong>Louis Marle</strong> — Albin Michel</li>
+        <li><strong>Grigoriy Manucharian</strong> — Humensis</li>
+        <li><strong>Bertrand Thiry</strong> — Fleurus</li>
+        <li><strong>Julie Vasseur</strong> — Hachette</li>
+        <li style="opacity:0.7"><strong>Laurence Zaysser</strong> — Sejer</li>
+      </ul>
+      <hr />
+      <small>Sous </small>
+      <ul class="authors-list">
+        <li style="opacity:0.7"><strong>Tiphaine Duchenoy</strong> — SNE</li>
+        <li ><strong>Clémentine Guinebert</strong> — SNE</li>
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+
+
+<!-- JS -->          
+<script src="assets/plugins/popper.min.js"></script>
+<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+<script src="assets/plugins/smoothscroll.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+<script src="assets/js/highlight-custom.js"></script> 
+<script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
+<script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+<script src="assets/js/docs.js"></script> 
 </body>
-</html> 
-
+</html>
